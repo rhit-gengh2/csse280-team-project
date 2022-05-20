@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Team</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark fixed-top">
+    <a class="navbar-brand" href="/teamlist.html">Team</a>
+
+    <div class="dropdown pull-xs-right">
+      <button class="btn bmd-btn-icon dropdown-toggle" type="button" id="lr1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="material-icons">more_vert</i>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="lr1">
+        <button id="menuEdit" class="dropdown-item" type="button" data-toggle="modal" data-target="#editTeamDialog">
+          <i class="material-icons">edit</i>&nbsp;&nbsp;&nbsp;Edit
+        </button>
+        <button id="menuDelete" class="dropdown-item" type="button" data-toggle="modal" data-target="#deleteTeamDialog">
+          <i class="material-icons">delete</i>&nbsp;&nbsp;&nbsp;Delete
+        </button>
+        <button id="signOutButton" class="dropdown-item" type="button">
+          <i class="material-icons">login</i>&nbsp;&nbsp;&nbsp;Sign Out
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div id="teamPage" class="container page-container">
+    <div >
+      Rank:
+      <h3 id="rankDiv"></h3>
+      <hr>
+      Player Numbers:
+      <h3 id="numDiv"></h3>
+      <hr>
+      Description:
+      <div id="contentDiv"></div>
+      <button id="join" type="button" class="d-block ml-auto btn btn-outline-secondary">Join</button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="editTeamDialog" tabindex="-1" role="dialog" aria-labelledby="Add quote dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit This Team</h5>
+        </div>
+        <div class="modal-body">
+            <div class="form-group"> 
+              <label for="inputRank" class="bmd-label-floating">Rank</label>
+              <input type="text" class="form-control" id="inputRank">
+            </div>
+            <div class="form-group bmd-form-group"> 
+              <label for="inputNumber" class="bmd-label-floating">Numbers of Players Needed</label>
+              <input type="text" class="form-control" id="inputNumber">
+              <span class="bmd-help">How many players needed to fill the team?</span>
+            </div>
+            <div class="form-group bmd-form-group"> 
+              <label for="inputStyle" class="bmd-label-floating">Position/Playing Style</label>
+              <input type="text" class="form-control" id="inputStyle">
+              <span class="bmd-help">Short description of your playing style and prefered teammates' position</span>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+          <button id="submitEditTeam"type="button" class="btn btn-primary" data-dismiss="modal">SAVE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" id="deleteTeamDialog" tabindex="-1" role="dialog" aria-labelledby="Delete quote dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete this team</h5>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete this team?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+        <button id="submitDeleteTeam"type="button" class="btn btn-primary">DELETE</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>$("body").bootstrapMaterialDesign();</script>
+  <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+body {
+    background: #DDDDDD;
+}
+
+.navbar {
+    background-color: gray;
+    color: white;
+}
+
+.page-container {
+    margin-top: 75px;
+}
+
+#leagueLogo{
+    max-width: 320px;
+    margin: 20px auto;
+    display: block;
+}
+
+#goToLogin{
+    display: block;
+    margin: 60px auto;
+    color: white;
+    background: gray;
+    font-size: 1.1em;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.card{
+    margin-bottom: 20px;
+}
+
+#fab{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: gray;
+    color: white;
+    z-index: 999;
+}
+ #fab:active{
+     transform: translateY(2px);
+     opacity: 0.8;
+ }
+ .bmd-layout-content{
+    height: 100vh;
+}
+
+.bmd-layout-drawer>header {
+   background-color: gray;
+   color: white;
+}
+
+.bmd-layout-drawer>ul {
+    background-color: #ddd;
+    
+}
+
+.list-group-item :first-child {
+   margin-right: .75rem;
+}
+
+.dropdown-menu-right{
+    left: -128px;
+}
+
+#highlightPhoto{
+    max-width: 100%;
+}
+
+#menuEdit,
+#menuDelete{
+   display: none;
+}

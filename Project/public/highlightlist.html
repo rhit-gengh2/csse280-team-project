@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Highlights</title>
+</head>
+
+<body>
+  <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
+    <header class="bmd-layout-header">
+      <div class="navbar navbar-dark bg-faded fixed-top justify-content-start">
+        <button class="navbar-toggler" type="button" data-toggle="drawer" data-target="#dw-s2">
+          <span class="sr-only">Toggle drawer</span>
+          <i class="material-icons">menu</i>
+        </button>
+        <a class="navbar-brand" href="main.html">&nbsp;&nbsp;Highlights</a>
+      </div>
+    </header>
+    <div id="dw-s2" class="bmd-layout-drawer bg-faded">
+      <header> 
+        <a class="navbar-brand">My House</a>
+      </header>
+      <ul class="list-group">
+        <a id="menuShowMyTeam" class="list-group-item"><i class="material-icons">people_alt</i>Show my team</a>
+        <a id="menuShowMyHighLight" class="list-group-item"><i class="material-icons">person</i>Show my highlight</a>
+        <a id="menuSignOut" class="list-group-item"><i class="material-icons">login</i>Sign out</a>
+      </ul>
+    </div>
+    <main class="bmd-layout-content">
+      <div id="highlightListPage" class="container page-container">
+        <div id="columns"></div>
+      </div>
+    </main>
+  </div>
+  <button id="fab" type="button" class="btn bmd-btn-fab" data-toggle="modal" data-target="#addHighlightDialog">
+    <i class="material-icons">add</i>
+  </button>
+
+<!-- Modal -->
+<div class="modal fade" id="addHighlightDialog" tabindex="-1" role="dialog" aria-labelledby="Add highlight dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add a Highlight</h5>
+      </div>
+      <div class="modal-body">
+          <div class="form-group"> 
+            <label for="inputTopic" class="bmd-label-floating">Topic</label>
+            <input type="text" class="form-control" id="inputTopic">
+          </div>
+          <div class="form-group"> 
+            <label for="inputFile" class="bmd-label-floating">Image to upload</label>
+            <input type="file" class="form-control" id="inputFile">
+            <span class="bmd-help">URL to existing image</span>
+          </div>
+          <div class="form-group bmd-form-group"> 
+            <label for="inputContent" class="bmd-label-floating">Content</label>
+            <input type="text" class="form-control" id="inputContent">
+            <span class="bmd-help">Description of this highlight</span>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+        <button id="submitAddHighlight" type="button" class="btn btn-primary" data-dismiss="modal">CREATE</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>$("body").bootstrapMaterialDesign();</script>
+  <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-storage.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
